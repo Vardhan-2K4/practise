@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with HTML Lists</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        ul, ol, dl { margin-bottom: 20px; border: 1px solid #eee; padding: 15px; border-radius: 5px;}
+        dt { font-weight: bold; margin-top: 10px; color: #555;}
+        dd { margin-left: 20px; margin-bottom: 5px; color: #777;}
+    </style>
+</head>
+<body>
+
+    <h1>Understanding HTML Lists</h1>
+
+    <h2>1. Unordered List (<code>&lt;ul&gt;</code>)</h2>
+    <p>Items in an unordered list are typically marked with bullet points.</p>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+
+    <h2>2. Ordered List (<code>&lt;ol&gt;</code>)</h2>
+    <p>Items in an ordered list are typically marked with numbers or letters.</p>
+    <ol>
+        <li>First Step</li>
+        <li>Second Step</li>
+        <li>Third Step</li>
+    </ol>
+
+    <h2>3. Nested Lists</h2>
+    <p>You can embed one type of list inside another.</p>
+    <h3>Unordered List containing an Ordered List:</h3>
+    <ul>
+        <li>Fruits
+            <ol>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ol>
+        </li>
+        <li>Vegetables
+            <ol>
+                <li>Carrot</li>
+                <li>Spinach</li>
+                <li>Potato</li>
+            </ol>
+        </li>
+    </ul>
+
+    <h3>Ordered List containing an Unordered List:</h3>
+    <ol>
+        <li>Breakfast Items
+            <ul>
+                <li>Cereal</li>
+                <li>Milk</li>
+                <li>Toast</li>
+            </ul>
+        </li>
+        <li>Lunch Items
+            <ul>
+                <li>Sandwich</li>
+                <li>Salad</li>
+                <li>Soup</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>4. Ordered List in an Unordered List</h2>
+    <p>Here's a specific example of an ordered list placed inside an unordered list item.</p>
+    <ul>
+        <li>My Favorite Books:
+            <ol>
+                <li>"The Great Gatsby"</li>
+                <li>"To Kill a Mockingbird"</li>
+                <li>"1984"</li>
+            </ol>
+        </li>
+        <li>My Favorite Movies:
+            <ul>
+                <li>Inception</li>
+                <li>The Matrix</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>5. Definition List (<code>&lt;dl&gt;</code>)</h2>
+    <p>A definition list is a list of terms and their descriptions.</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language. The standard markup language for documents designed to be displayed in a web browser.</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets. A style sheet language used for describing the presentation of a document written in HTML.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>A programming language that is one of the core technologies of the World Wide Web.</dd>
+    </dl>
+
+</body>
+</html>

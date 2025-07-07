@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Frames Example</title>
+</head>
+<frameset rows="30%, 40%, *" cols="*"> <frame src="frame1.html" name="frame1" noresize="noresize">
+    <frame src="frame2.html" name="frame2" noresize="noresize">
+    <frame src="frame3.html" name="frame3" noresize="noresize">
+
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+            <p>Please use a modern browser that does not rely on deprecated frame technology, or access content directly:</p>
+            <ul>
+                <li><a href="frame1.html">Image Content</a></li>
+                <li><a href="frame2.html">Paragraph Content</a></li>
+                <li><a href="frame3.html">Hyperlink Content</a></li>
+            </ul>
+        </body>
+    </noframes>
+</frameset>
+</html>

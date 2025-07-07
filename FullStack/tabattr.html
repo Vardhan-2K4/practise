@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Timetable</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f8f8;}
+        h1 { color: #333; text-align: center; margin-bottom: 30px;}
+        table {
+            width: 90%;
+            border-collapse: separate; /* Allows cellspacing to work */
+            border-spacing: 5px; /* Equivalent to HTML cellspacing */
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden; /* Ensures border-radius applies nicely */
+        }
+        caption {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #0056b3;
+            padding: 10px;
+            background-color: #e0f2f7;
+            border-radius: 5px;
+        }
+        th, td {
+            border: 1px solid #cfe2f3;
+            padding: 15px; /* Equivalent to HTML cellpadding */
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1em;
+            letter-spacing: 0.5px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2faff; /* Light blue for even rows */
+        }
+        tr:hover {
+            background-color: #e6f7ff;
+        }
+        /* Specific styling for merged cells or special activities */
+        .lunch {
+            background-color: #ffebcc; /* Light orange for lunch */
+            font-weight: bold;
+            color: #e67e22;
+        }
+        .break {
+            background-color: #e0ffe0; /* Light green for break */
+            font-style: italic;
+            color: #28a745;
+        }
+        .notes {
+            background-color: #fff3cd;
+            font-size: 0.9em;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Weekly Timetable</h1>
+
+    <table border="1" cellpadding="15" cellspacing="5">
+        <caption>Academic Timetable - Semester Fall 2025</caption>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:00 - 10:00</td>
+                <td>Maths</td>
+                <td>Physics</td>
+                <td>Maths</td>
+                <td>Chemistry</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td>Chemistry</td>
+                <td>Maths</td>
+                <td>Physics</td>
+                <td>Maths</td>
+                <td>Chemistry</td>
+            </tr>
+            <tr>
+                <td>11:00 - 11:30</td>
+                <td colspan="5" class="break">Morning Break</td> </tr>
+            <tr>
+                <td>11:30 - 12:30</td>
+                <td>Biology</td>
+                <td>Computer Science</td>
+                <td>Biology</td>
+                <td>Computer Science</td>
+                <td>Biology</td>
+            </tr>
+            <tr>
+                <td>12:30 - 1:30</td>
+                <td colspan="5" class="lunch">LUNCH BREAK</td> </tr>
+            <tr>
+                <td>1:30 - 2:30</td>
+                <td>History</td>
+                <td rowspan="2">Lab Session (Physics)</td> <td>Geography</td>
+                <td rowspan="2">Lab Session (Chemistry)</td> <td>History</td>
+            </tr>
+            <tr>
+                <td>2:30 - 3:30</td>
+                <td>Art</td>
+                <td>Music</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>3:30 - 4:30</td>
+                <td colspan="5" class="notes">Self-Study / Extra Curricular Activities</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" class="notes">
+                    Note: Schedule is subject to change. Please check official announcements.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Audio and Video in HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #0056b3;
+            margin-bottom: 30px;
+        }
+        .media-container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 30px auto;
+            max-width: 700px;
+            text-align: left;
+        }
+        video, audio {
+            display: block; /* Ensures they take full width if needed */
+            margin: 0 auto 20px auto; /* Centers them */
+            width: 100%; /* Make them responsive */
+            max-width: 600px; /* Max width for larger screens */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        p {
+            font-size: 1.1em;
+            margin-top: 20px;
+            color: #555;
+            text-align: center;
+        }
+        ul {
+            text-align: left;
+            margin-left: 20px;
+            color: #666;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        code {
+            background-color: #eef;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Embedding Media in HTML5</h1>
+
+    <div class="media-container">
+        <h2>1. Embedding Audio (<code>&lt;audio&gt;</code> Tag)</h2>
+        <p>The <code>&lt;audio&gt;</code> element is used to embed sound content in documents.</p>
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>
+            <strong>Attributes used:</strong>
+            <ul>
+                <li><code>controls</code>: Displays standard audio controls (play/pause, volume, seek).</li>
+                <li><code>&lt;source&gt;</code>: Allows you to specify alternative audio files, and the browser will use the first one it supports.</li>
+                <li><code>type</code>: Specifies the MIME type of the audio file.</li>
+            </ul>
+            Ensure you have 'audio.mp3' (and optionally 'audio.ogg') in the same directory as this HTML file.
+        </p>
+    </div>
+
+    <div class="media-container">
+        <h2>2. Embedding Video (<code>&lt;video&gt;</code> Tag)</h2>
+        <p>The <code>&lt;video&gt;</code> element is used to embed video content in documents.</p>
+
+        <video width="600" height="340" controls preload="metadata" poster="https://via.placeholder.com/600x340?text=Video+Thumbnail">
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <p>
+            <strong>Attributes used:</strong>
+            <ul>
+                <li><code>controls</code>: Displays standard video controls (play/pause, volume, seek, full screen).</li>
+                <li><code>width</code> and <code>height</code>: Sets the dimensions of the video player.</li>
+                <li><code>preload="metadata"</code>: Suggests to the browser to load only metadata (duration, dimensions) to start playback faster.</li>
+                <li><code>poster</code>: Specifies an image to be displayed before the video starts playing.</li>
+                <li><code>&lt;source&gt;</code>: Allows you to specify alternative video files and formats for broader browser compatibility.</li>
+                <li><code>type</code>: Specifies the MIME type of the video file.</li>
+            </ul>
+            Ensure you have 'video.mp4' (and optionally 'video.webm') in the same directory as this HTML file.
+            The `poster` attribute uses a placeholder image.
+        </p>
+    </div>
+
+</body>
+</html>

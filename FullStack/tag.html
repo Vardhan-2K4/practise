@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Structure Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section {
+            flex: 3; /* Takes more space */
+            padding: 20px;
+            background-color: #e9f5f9;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        article {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        article h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        aside {
+            flex: 1; /* Takes less space */
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        aside h3 {
+            color: #28a745;
+        }
+
+        figure {
+            margin: 20px 0;
+            text-align: center;
+            border: 1px solid #eee;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 3px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+
+        .highlight {
+            background-color: #ffc;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .container { /* Example of div */
+            padding: 15px;
+            border: 1px dashed #999;
+            margin-bottom: 15px;
+            background-color: #f0f0f0;
+        }
+        .label { /* Example of span */
+            font-weight: bold;
+            color: #a00;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My HTML5 Semantic Page</h1>
+        <p>Exploring new structural elements</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="articles-section">
+            <h2>Latest Articles</h2>
+            <p>This <span class="label">section</span> contains a collection of recent articles related to web development.</p>
+
+            <article>
+                <h2>Understanding Semantic HTML5</h2>
+                <p>
+                    Semantic HTML5 elements provide meaningful structure to web content,
+                    making it more readable for both humans and search engines.
+                    Instead of just using generic &lt;div&gt; tags,
+                    we now have elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, and &lt;footer&gt;.
+                    This improves accessibility and SEO.
+                </p>
+                <div class="container">
+                    <p>This is a generic <span class="label">div</span> container inside an article, useful for styling or grouping content.</p>
+                    <p>It can hold a <span class="highlight">variety of content</span>.</p>
+                </div>
+            </article>
+
+            <article>
+                <h2>The Power of Responsive Design</h2>
+                <p>
+                    Responsive web design ensures that web pages render well on a variety of devices and window or screen sizes,
+                    from minimum to maximum display size. It involves a mix of flexible grids and layouts, images, and an intelligent use of CSS media queries.
+                </p>
+                <figure>
+                    <img src="https://via.placeholder.com/400x200?text=Responsive+Design+Image" alt="Responsive Design Example">
+                    <figcaption>A placeholder image illustrating responsive design principles.</figcaption>
+                </figure>
+                <p>
+                    This <span class="label">article</span> showcases a <span class="highlight">figure</span> element, containing an image and its caption.
+                </p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Related Links</h3>
+            <p>This <span class="label">aside</span> section is for content tangentially related to the main content.</p>
+            <ul>
+                <li><a href="#">Web Development Tutorials</a></li>
+                <li><a href="#">CSS Flexbox Guide</a></li>
+                <li><a href="#">JavaScript Fundamentals</a></li>
+            </ul>
+            <h3>About the Author</h3>
+            <p>
+                John Doe is a passionate web developer with over 10 years of experience.
+                He loves teaching and sharing knowledge about modern web technologies.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Semantic Page. All rights reserved.</p>
+        <p>Developed with <span class="highlight">passion</span> and <span class="highlight">semantic HTML</span>.</p>
+    </footer>
+
+</body>
+</html>

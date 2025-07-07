@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with HTML Hyperlinks</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6;}
+        h1, h2 { color: #333; }
+        a { color: #007bff; text-decoration: none;}
+        a:hover { text-decoration: underline;}
+        p { margin-bottom: 15px;}
+    </style>
+</head>
+<body>
+
+    <h1>Understanding HTML Hyperlinks (<code>&lt;a&gt;</code> Tag)</h1>
+
+    <p>The <code>&lt;a&gt;</code> tag, also known as the anchor tag, is used to create hyperlinks.</p>
+
+    <h2>1. The <code>href</code> Attribute</h2>
+    <p>The <code>href</code> (hypertext reference) attribute specifies the URL of the page the link goes to.</p>
+
+    <h3>External Links:</h3>
+    <p>Links to other websites:</p>
+    <ul>
+        <li>Visit <a href="https://www.google.com">Google</a> for searching.</li>
+        <li>Learn more about web development on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN Web Docs - HTML</a>.</li>
+    </ul>
+
+    <h3>Internal Links (within the same website/page):</h3>
+    <p>Links to other pages within your website (if you had them):</p>
+    <ul>
+        <li>Go to an <a href="about.html">About Us</a> page (assuming 'about.html' exists).</li>
+        <li>Go to a <a href="contact.html">Contact Us</a> page.</li>
+    </ul>
+    <p>Links to a specific section on the *same* page (using ID):</p>
+    <p>Scroll down to the <a href="#section2">"The target Attribute"</a> section.</p>
+
+
+    <h2 id="section2">2. The <code>target</code> Attribute</h2>
+    <p>The <code>target</code> attribute specifies where to open the linked document.</p>
+
+    <ul>
+        <li><code>_self</code>: Opens the linked document in the same window/tab where it was clicked (this is the default).
+            <br><a href="https://www.example.com" target="_self">Example.com (opens in same tab)</a>
+        </li>
+        <li><code>_blank</code>: Opens the linked document in a new window or tab. This is commonly used for external links.
+            <br><a href="https://www.w3.org" target="_blank">W3C (opens in new tab)</a>
+        </li>
+        <li><code>_parent</code>: Opens the linked document in the parent frame. (Relevant when using frames).</li>
+        <li><code>_top</code>: Opens the linked document in the full body of the window. (Relevant when using frames).</li>
+    </ul>
+
+    <h3>Example combining <code>href</code> and <code>target</code>:</h3>
+    <p>
+        Click here to open Wikipedia in a new tab:
+        <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+    </p>
+    <p>
+        Click here to open DuckDuckGo in the same tab:
+        <a href="https://duckduckgo.com" target="_self">Search with DuckDuckGo</a>
+    </p>
+
+    <br><br><br>
+    <a href="#top">Back to Top (This link points to an element with id="top" which is not explicitly defined in this body, but generally for demonstrating)</a>
+    </body>
+</html>
